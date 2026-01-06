@@ -60,6 +60,7 @@ namespace SPRTechforgetestproject.Pages.Finance.payroll
         public void SaveRecord()
         {
             Click(saveRecordBtn, 10);
+           
         }
     }
 }

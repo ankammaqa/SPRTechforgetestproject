@@ -171,7 +171,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Tc_02 Verify user can save <Module> record")]
         [global::NUnit.Framework.TestCaseAttribute("Income", "16-12-2025", "10000", "Gudari (1)", "Ajay [Bank]", "Advance payment", "8", null)]
-        [global::NUnit.Framework.TestCaseAttribute("Expense", "16-12-2025", "15000", "Ajay [Bank]", "Office Expense", "Stationary purchase", "9", null)]
+        [global::NUnit.Framework.TestCaseAttribute("Expense", "16-12-2025", "15000", "Ajay [Bank]", "Rohit [Salary]", "Stationary purchase", "9", null)]
         [global::NUnit.Framework.TestCaseAttribute("Transfer", "16-12-2025", "20000", "Ajay [Bank]", "ram [Cash]", "Salary transfer", "10", null)]
         [global::NUnit.Framework.TestCaseAttribute("Refund", "16-12-2025", "50000", "ram [Cash]", "Gudari (1)", "Refund to candidate", "11", null)]
         public async global::System.Threading.Tasks.Task Tc_02VerifyUserCanSaveModuleRecord(string module, string date, string amount, string from, string to, string description, string @__pickleIndex, string[] exampleTags)
@@ -205,10 +205,10 @@ namespace SPRTechforgetestproject.Features.Financefuture
     await testRunner.WhenAsync("user clicks Finance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 26
-    await testRunner.AndAsync("user click on Transactions", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+    await testRunner.AndAsync("user click on Payroll", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 27
-    await testRunner.AndAsync("user clicks NewEntry", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("user clicks payexpance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 28
     await testRunner.AndAsync(string.Format("user selects {0} page", module), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
@@ -217,9 +217,6 @@ namespace SPRTechforgetestproject.Features.Financefuture
     await testRunner.AndAsync(string.Format("user fills details with \"{0}\" \"{1}\" \"{2}\" \"{3}\" \"{4}\"", date, amount, from, to, description), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 30
-    await testRunner.AndAsync("user saves the record", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 31
     await testRunner.ThenAsync("record should be saved successfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -229,7 +226,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Tc_03 Verify user can check on  Transactions save or Not")]
         [global::NUnit.Framework.TestCaseAttribute("Advance payment", "Income", "Unlocked", "Gudari (1)", "Ajay", "16-12-2025", "16-12-2025", "12", null)]
-        [global::NUnit.Framework.TestCaseAttribute("Stationary purchase", "Expense", "Unlocked", "Ajay", "Office Expense", "16-12-2025", "16-12-2025", "13", null)]
+        [global::NUnit.Framework.TestCaseAttribute("Stationary purchase", "Expense", "Unlocked", "Ajay", "Rohit [Salary]", "16-12-2025", "16-12-2025", "13", null)]
         [global::NUnit.Framework.TestCaseAttribute("Salary transfer", "Transfer", "Unlocked", "ram", "Ajay", "16-12-2025", "16-12-2025", "14", null)]
         [global::NUnit.Framework.TestCaseAttribute("Refund to candidate", "Refund", "Unlocked", "ram", "Gudari (1)", "16-12-2025", "16-12-2025", "15", null)]
         public async global::System.Threading.Tasks.Task Tc_03VerifyUserCanCheckOnTransactionsSaveOrNot(string description, string types, string statuses, string sourceFrom, string destinationTo, string fromdate, string todate, string @__pickleIndex, string[] exampleTags)
@@ -247,7 +244,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Tc_03 Verify user can check on  Transactions save or Not", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 44
+#line 43
  this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -257,16 +254,16 @@ namespace SPRTechforgetestproject.Features.Financefuture
             else
             {
                 await this.ScenarioStartAsync();
-#line 45
+#line 44
     await testRunner.GivenAsync("user navigate to login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 46
+#line 45
     await testRunner.WhenAsync("user clicks Finance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 47
+#line 46
     await testRunner.AndAsync("user click on Transactions", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 48
+#line 47
  await testRunner.AndAsync(string.Format("user fill details with \"{0}\" \"{1}\" \"{2}\" \"{3}\" \"{4}\" \"{5}\" \"{6}\"", description, types, statuses, sourceFrom, destinationTo, fromdate, todate), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -292,7 +289,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Tc_04 Verify user can check on  LedgerAccounts", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 59
+#line 58
     this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -302,16 +299,16 @@ namespace SPRTechforgetestproject.Features.Financefuture
             else
             {
                 await this.ScenarioStartAsync();
-#line 60
+#line 59
     await testRunner.GivenAsync("user navigate to login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 61
+#line 60
     await testRunner.WhenAsync("user clicks Finance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 62
+#line 61
     await testRunner.AndAsync("user click on Legder Accounts", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 62
     await testRunner.ThenAsync(string.Format("user search by name or sub-type \"{0}\"", searchby), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }

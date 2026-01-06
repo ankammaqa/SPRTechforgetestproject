@@ -36,13 +36,24 @@ namespace SPRTechforgetestproject.Stepdefinations.FinanceStepdefination
         {
             transactions.Gototransactions();
         }
+        [When("user click on Payroll")]
+        public void WhenUserClickOnPayroll()
+        {
+            payroll.Gotopayroll();
+        }
 
+        [When("user clicks payexpance module")]
+        public void WhenUserClicksPayexpanceModule()
+        {
+            payroll.GotopayExpance();
+        }
 
+/*
         [When("user clicks NewEntry")]
         public void WhenUserClicksNewEntry()
         {
             transactions.Gotonewentry();
-        }
+        }*/
 
         //Ledger account details
         [When("user click on Legder Accounts")]
@@ -78,16 +89,12 @@ namespace SPRTechforgetestproject.Stepdefinations.FinanceStepdefination
 
 
 
-        [When("user saves the record")]
-        public void WhenUserSavesRecord()
-        {
-            payroll.SaveRecord();
-        }
+       
 
         [Then("record should be saved successfully")]
         public void ThenRecordSaved()
         {
-            Assert.IsTrue(true, "Record saved successfully!");
+            payroll.SaveRecord();
         }
 
        
