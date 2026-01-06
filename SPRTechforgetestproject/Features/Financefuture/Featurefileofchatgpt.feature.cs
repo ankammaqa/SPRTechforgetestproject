@@ -110,6 +110,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Tc_01 Verify user can save Ledgeraccount record")]
+        [global::NUnit.Framework.CategoryAttribute("Regression")]
         [global::NUnit.Framework.TestCaseAttribute("Ajay", "Bank", "sbi", "50000", "0", "16-12-2025", "Personal savings account", "0", null)]
         [global::NUnit.Framework.TestCaseAttribute("ram", "Cash", "hdfc", "100000", "0", "16-12-2025", "Business current account", "1", null)]
         [global::NUnit.Framework.TestCaseAttribute("kalyan", "Debtor", "icici", "30000", "0", "16-12-2025", "Monthly salary account", "2", null)]
@@ -120,7 +121,13 @@ namespace SPRTechforgetestproject.Features.Financefuture
         [global::NUnit.Framework.TestCaseAttribute("Rahul", "Equity", "yesbank", "40000", "0", "16-12-2025", "Investment account", "7", null)]
         public async global::System.Threading.Tasks.Task Tc_01VerifyUserCanSaveLedgeraccountRecord(string name, string accounttype, string subledger, string openingbalence, string fixedmonthlyamount, string startdate, string description, string @__pickleIndex, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Regression"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Name", name);
             argumentsOfScenario.Add("Accounttype", accounttype);
@@ -133,7 +140,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Tc_01 Verify user can save Ledgeraccount record", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 3
+#line 4
    this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -143,25 +150,25 @@ namespace SPRTechforgetestproject.Features.Financefuture
             else
             {
                 await this.ScenarioStartAsync();
-#line 4
+#line 5
   await testRunner.GivenAsync("user navigate to login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 5
+#line 6
   await testRunner.WhenAsync("user clicks Finance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 6
+#line 7
   await testRunner.AndAsync("user click on Legder Accounts", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 7
+#line 8
   await testRunner.AndAsync("user click Add Account", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 9
   await testRunner.AndAsync(string.Format("user fills details with \"{0}\" \"{1}\" \"{2}\" \"{3}\" \"{4}\" \"{5}\" \"{6}\"", name, accounttype, subledger, openingbalence, fixedmonthlyamount, startdate, description), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 9
+#line 10
   await testRunner.AndAsync("user click on save account", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 11
   await testRunner.ThenAsync("Accounts added succesfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -170,13 +177,20 @@ namespace SPRTechforgetestproject.Features.Financefuture
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Tc_02 Verify user can save <Module> record")]
+        [global::NUnit.Framework.CategoryAttribute("Regression")]
         [global::NUnit.Framework.TestCaseAttribute("Income", "16-12-2025", "10000", "Gudari (1)", "Ajay [Bank]", "Advance payment", "8", null)]
-        [global::NUnit.Framework.TestCaseAttribute("Expense", "16-12-2025", "15000", "Ajay [Bank]", "Office Expense", "Stationary purchase", "9", null)]
+        [global::NUnit.Framework.TestCaseAttribute("Expense", "16-12-2025", "15000", "Ajay [Bank]", "Rohit [Salary]", "Stationary purchase", "9", null)]
         [global::NUnit.Framework.TestCaseAttribute("Transfer", "16-12-2025", "20000", "Ajay [Bank]", "ram [Cash]", "Salary transfer", "10", null)]
         [global::NUnit.Framework.TestCaseAttribute("Refund", "16-12-2025", "50000", "ram [Cash]", "Gudari (1)", "Refund to candidate", "11", null)]
         public async global::System.Threading.Tasks.Task Tc_02VerifyUserCanSaveModuleRecord(string module, string date, string amount, string from, string to, string description, string @__pickleIndex, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Regression"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Module", module);
             argumentsOfScenario.Add("Date", date);
@@ -188,7 +202,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Tc_02 Verify user can save <Module> record", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 23
+#line 25
   this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -198,28 +212,25 @@ namespace SPRTechforgetestproject.Features.Financefuture
             else
             {
                 await this.ScenarioStartAsync();
-#line 24
+#line 26
     await testRunner.GivenAsync("user navigate to login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 25
+#line 27
     await testRunner.WhenAsync("user clicks Finance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 26
-    await testRunner.AndAsync("user click on Transactions", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
-#line 27
-    await testRunner.AndAsync("user clicks NewEntry", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
-#line hidden
 #line 28
-    await testRunner.AndAsync(string.Format("user selects {0} page", module), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+    await testRunner.AndAsync("user click on Payroll", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 29
-    await testRunner.AndAsync(string.Format("user fills details with \"{0}\" \"{1}\" \"{2}\" \"{3}\" \"{4}\"", date, amount, from, to, description), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("user clicks payexpance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 30
-    await testRunner.AndAsync("user saves the record", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+    await testRunner.AndAsync(string.Format("user selects {0} page", module), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 31
+    await testRunner.AndAsync(string.Format("user fills details with \"{0}\" \"{1}\" \"{2}\" \"{3}\" \"{4}\"", date, amount, from, to, description), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 32
     await testRunner.ThenAsync("record should be saved successfully", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -228,13 +239,20 @@ namespace SPRTechforgetestproject.Features.Financefuture
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Tc_03 Verify user can check on  Transactions save or Not")]
+        [global::NUnit.Framework.CategoryAttribute("Regression")]
         [global::NUnit.Framework.TestCaseAttribute("Advance payment", "Income", "Unlocked", "Gudari (1)", "Ajay", "16-12-2025", "16-12-2025", "12", null)]
-        [global::NUnit.Framework.TestCaseAttribute("Stationary purchase", "Expense", "Unlocked", "Ajay", "Office Expense", "16-12-2025", "16-12-2025", "13", null)]
+        [global::NUnit.Framework.TestCaseAttribute("Stationary purchase", "Expense", "Unlocked", "Ajay", "Rohit [Salary]", "16-12-2025", "16-12-2025", "13", null)]
         [global::NUnit.Framework.TestCaseAttribute("Salary transfer", "Transfer", "Unlocked", "ram", "Ajay", "16-12-2025", "16-12-2025", "14", null)]
         [global::NUnit.Framework.TestCaseAttribute("Refund to candidate", "Refund", "Unlocked", "ram", "Gudari (1)", "16-12-2025", "16-12-2025", "15", null)]
         public async global::System.Threading.Tasks.Task Tc_03VerifyUserCanCheckOnTransactionsSaveOrNot(string description, string types, string statuses, string sourceFrom, string destinationTo, string fromdate, string todate, string @__pickleIndex, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Regression"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Description", description);
             argumentsOfScenario.Add("Types", types);
@@ -247,7 +265,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Tc_03 Verify user can check on  Transactions save or Not", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 44
+#line 46
  this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -257,16 +275,16 @@ namespace SPRTechforgetestproject.Features.Financefuture
             else
             {
                 await this.ScenarioStartAsync();
-#line 45
+#line 47
     await testRunner.GivenAsync("user navigate to login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 46
+#line 48
     await testRunner.WhenAsync("user clicks Finance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 47
+#line 49
     await testRunner.AndAsync("user click on Transactions", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 48
+#line 50
  await testRunner.AndAsync(string.Format("user fill details with \"{0}\" \"{1}\" \"{2}\" \"{3}\" \"{4}\" \"{5}\" \"{6}\"", description, types, statuses, sourceFrom, destinationTo, fromdate, todate), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -275,6 +293,7 @@ namespace SPRTechforgetestproject.Features.Financefuture
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Tc_04 Verify user can check on  LedgerAccounts")]
+        [global::NUnit.Framework.CategoryAttribute("Regression")]
         [global::NUnit.Framework.TestCaseAttribute("Ajay", "16", null)]
         [global::NUnit.Framework.TestCaseAttribute("ram", "17", null)]
         [global::NUnit.Framework.TestCaseAttribute("kalyan", "18", null)]
@@ -285,14 +304,20 @@ namespace SPRTechforgetestproject.Features.Financefuture
         [global::NUnit.Framework.TestCaseAttribute("Rahul", "23", null)]
         public async global::System.Threading.Tasks.Task Tc_04VerifyUserCanCheckOnLedgerAccounts(string searchby, string @__pickleIndex, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Regression"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Searchby", searchby);
             string pickleIndex = @__pickleIndex;
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Tc_04 Verify user can check on  LedgerAccounts", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 59
+#line 62
     this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -302,16 +327,16 @@ namespace SPRTechforgetestproject.Features.Financefuture
             else
             {
                 await this.ScenarioStartAsync();
-#line 60
+#line 63
     await testRunner.GivenAsync("user navigate to login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 61
+#line 64
     await testRunner.WhenAsync("user clicks Finance module", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 62
+#line 65
     await testRunner.AndAsync("user click on Legder Accounts", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 66
     await testRunner.ThenAsync(string.Format("user search by name or sub-type \"{0}\"", searchby), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
